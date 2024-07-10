@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Fresh with Thread
+{% endblock %}
+
+{% block content %}
+<h1 class = "text-center mt-4">Welcome to My Django Project</h1>
+<a class = "btn btn-primary mb-4" href="{% url 'threads_create' %}"> Create a Thread</a>
+
+<div class="container row gap-3">
+    {% for threads in thread %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{threads.image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{threads.user.username}}</h5>
+            <p class="card-text">{{threads.text}}</p>
+            {% if threads.user == user %}
+            <a href="{% url 'threads_edit' threads.id %}" class="btn btn-primary">Edit</a>
+            <a href="{% url 'threads_delete' threads.id %}" class="btn btn-danger">Delete</a>
+            {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

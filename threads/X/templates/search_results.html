@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}
+Search Results
+{% endblock %}
+
+{% block content %}
+<h2>Search Results for "{{ query }}"</h2>
+
+{% if threads %}
+<div class="container row gap-3">
+    {% for thread in threads %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{ thread.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ thread.user.username }}</h5>
+            <p class="card-text">{{ thread.text }}</p>
+        </div>
+    </div>
+    {% empty %}
+    <p>No threads found matching the query.</p>
+    {% endfor %}
+</div>
+{% else %}
+<p>No threads found matching the query.</p>
+{% endif %}
+
+<a href="{% url 'threads_list' %}" class="btn btn-primary mt-3">Back to Thread List</a>
+{% endblock %}

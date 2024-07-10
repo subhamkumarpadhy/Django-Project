@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Fresh with Thread
+{% endblock %}
+
+{% block content %}
+<h1 class = "text-center mt-4">Welcome to My Django Project</h1>
+
+<h2>
+    {% if thread_form.instance.pk %}
+    Edit Thread
+    {% else %}
+    Create Thread
+    {% endif %}
+    <form method="post" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        {{ thread_form.as_p }}
+        <button class='btn btn-warning' type="submit" >
+            Submit
+        </button>
+    </form>
+    <a href="{% url 'threads_list' %}">Back to Thread list</a>
+</h2>
+{% endblock %}
