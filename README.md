@@ -1,4 +1,3 @@
-Threads by Subham
 "Threads" is a Django-based social media platform designed for sharing thoughts and updates, developed by Subham Kumar Padhy.
 
 ->Features:
