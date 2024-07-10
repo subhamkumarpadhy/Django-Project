@@ -17,11 +17,12 @@ User Profiles: View and manage user profiles.
 Clone the repository: Open any terminal then,
 1. git clone https://github.com/subhamkumarpadhy/Django-Project.git
 2. cd threads
-3. Create a virtual environment (optional but recommended): python -m venv .venv
-4. To activate the virtual env: Windows `.venv\Scripts\activate` #On linux or macOs 'source .venv/bin/activate'
-5. Install dependencies: pip install -r requirements.txt
-6. Apply database migrations: python manage.py migrate
-7. Run the development server: python manage.py runserver
-8. Access the application: Open your web browser and go to http://localhost:8000/
+3. Then make a directory named static
+4. Create a virtual environment (optional but recommended): python -m venv .venv
+5. To activate the virtual env: Windows `.venv\Scripts\activate` #On linux or macOs 'source .venv/bin/activate'
+6. Install dependencies: pip install -r requirements.txt
+7. Apply database migrations: python manage.py migrate
+8. Run the development server: python manage.py runserver
+9. Access the application: Open your web browser and go to http://localhost:8000/
 
 Contributions are welcome! Please fork the repository and create a pull request for any enhancements or bug fixes.
