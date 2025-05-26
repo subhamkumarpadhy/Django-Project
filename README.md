@@ -38,8 +38,8 @@
    -- cd Django-Project
 2. **Create and Activate Virtual Environment**
    -- python -m venv venv
-   --source venv/bin/activate
-   --# On Windows: venv\Scripts\activate
+   -- On Windows: venv\Scripts\activate
+   -- On Mac: source venv/bin/activate
 4. **Install Dependencies**
    -- pip install -r requirements.txt
 5. **Apply Migrations**
@@ -49,6 +49,6 @@
 7. **Open in Browser**
    -- http://127.0.0.1:8000/
 
---
+ ---
 
 ## ⭐ If you found this project helpful or interesting, consider giving it a star!
